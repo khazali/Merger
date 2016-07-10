@@ -25,7 +25,9 @@ int main(void) {
 		m++;
 		j++;
 	}
-	m--;
+	FullName[m - 1] = '\\';
+	FullNameOut[m - 1] = '\\';
+	
 	j = 0;
 	while (FileName[j]) {
 		FullName[m] = FileName[j];
@@ -80,7 +82,7 @@ int main(void) {
 		printf("%s Done!\n", FullName);
 
 		fclose(inFile);
-		//fflush(OutFile);		
+		fflush(OutFile);		
 	}
 
 	fclose(OutFile);
